@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Legit.Application\Legit.Application.csproj" />
+    <ProjectReference Include="..\Legit.Infrastructure\Legit.Infrastructure.csproj" />
+    <ProjectReference Include="..\Legit.Domain\Legit.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+      <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "lRkxSlZ9N9Y=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitModule\\Legit.Application\\Legit.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SyedAbdulKasim\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\SyedAbdulKasim\\.nuget\\packages\\mediatr\\12.0.0\\mediatr.12.0.0.nupkg.sha512",
+    "C:\\Users\\SyedAbdulKasim\\.nuget\\packages\\mediatr.contracts\\2.0.0\\mediatr.contracts.2.0.0.nupkg.sha512",
+    "C:\\Users\\SyedAbdulKasim\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
+    "C:\\Users\\SyedAbdulKasim\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
