@@ -1,0 +1,295 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Api\\LegitModule.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Api\\LegitModule.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Api\\LegitModule.csproj",
+        "projectName": "LegitModule",
+        "projectPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Api\\LegitModule.csproj",
+        "packagesPath": "C:\\Users\\SyedAbdulKasim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SyedAbdulKasim\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Application\\Legit.Application.csproj": {
+                "projectPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Application\\Legit.Application.csproj"
+              },
+              "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Domain\\Legit.Domain.csproj": {
+                "projectPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Domain\\Legit.Domain.csproj"
+              },
+              "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Infrastructure\\Legit.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Infrastructure\\Legit.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Application\\Legit.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Application\\Legit.Application.csproj",
+        "projectName": "Legit.Application",
+        "projectPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Application\\Legit.Application.csproj",
+        "packagesPath": "C:\\Users\\SyedAbdulKasim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SyedAbdulKasim\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Domain\\Legit.Domain.csproj": {
+                "projectPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Domain\\Legit.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.4.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Domain\\Legit.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Domain\\Legit.Domain.csproj",
+        "projectName": "Legit.Domain",
+        "projectPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Domain\\Legit.Domain.csproj",
+        "packagesPath": "C:\\Users\\SyedAbdulKasim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SyedAbdulKasim\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Infrastructure\\Legit.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Infrastructure\\Legit.Infrastructure.csproj",
+        "projectName": "Legit.Infrastructure",
+        "projectPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Infrastructure\\Legit.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\SyedAbdulKasim\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\SyedAbdulKasim\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Application\\Legit.Application.csproj": {
+                "projectPath": "C:\\Users\\SyedAbdulKasim\\Desktop\\PracticeProj\\jsprac\\L\\Legit\\LegitBackend\\Legit.Application\\Legit.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
