@@ -1,9 +1,0 @@
-.content {
-  padding: 2rem;
-  min-height: calc(
-    100vh - 150px
-  ); 
-  background-position: center;
-  background-size: cover;
-}
-

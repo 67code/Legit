@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  mission = "Not Every Store Is Legit—But We’ll Tell You Which Ones Are!";
+  mission: string = "Empowering Trust, One Business at a Time.";
 }
