@@ -1,7 +1,7 @@
-// app.routes.ts
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from '../home/home.component'; // Import the HomeComponent directly
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },  // Default route
+  { path: '', component: HomeComponent } // Use HomeComponent here
 ];
+

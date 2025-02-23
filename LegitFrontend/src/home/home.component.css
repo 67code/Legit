@@ -1,0 +1,32 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#review{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  
+}
+:host ::ng-deep .first-half {
+  color: rgb(9, 9, 10);
+  font-weight: bold;
+}
+
+:host ::ng-deep .second-half {
+  color: red;
+  font-weight: normal;
+}
+.custom-link {
+  text-decoration: none;  /* Removes the underline */
+  color: inherit;         /* Inherits text color from parent */
+  font-weight: bold;      /* Makes it stand out if needed */
+  cursor: pointer;     
+     /* Shows pointer on hover */
+}
+
+.custom-link:hover {
+  text-decoration: underline; /* Optional: Add underline only on hover */
+}

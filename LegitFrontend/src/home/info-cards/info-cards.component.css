@@ -1,0 +1,58 @@
+.info-cards-container {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  position: relative;
+  width: 80%;
+  height: 250px;
+  max-width: 600px;
+  margin: auto;
+  background-color: #ffbc5e;
+  padding: 10px;
+}
+
+/* Image container (left side) */
+.info-card-img {
+  width: 40%; /* Takes 40% of the container */
+  height: 100%;
+  background-size: contain; /* Ensures full image display */
+  background-position: left center; /* Align image to left */
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: background-image 0.5s ease-in-out;
+
+}
+
+/* Text container (right side) */
+#info-card-text {
+  width: 60%; /* Takes 60% of the container */
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  color: #3f3f3f;
+  padding: 20px;
+}
+
+/* Arrows */
+.arrow {
+   border: none;
+  font-size: 30px;
+  font-weight: bold;
+  background-color:white;
+  color: rgb(208, 69, 69);
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Arrow positions */
+.prev {
+  left: -80px;
+}
+
+.next {
+  right: -80px;
+}

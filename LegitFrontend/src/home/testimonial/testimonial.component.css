@@ -1,0 +1,52 @@
+
+.testimonial-row {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;  /* Allows wrapping on smaller screens */
+  gap: 20px;
+  padding: 20px;
+  height: 400px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 23%;  /* 4 cards in a row */
+  min-width: 200px; /* Adjusts on smaller screens */
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.testimonial-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.user-name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .testimonial-card {
+    width: 45%; /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-card {
+    width: 100%; /* 1 card per row on mobile */
+  }
+}

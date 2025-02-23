@@ -1,0 +1,12 @@
+<div class="info-cards-container">
+  <!-- Previous Button -->
+  <button class="arrow prev" (click)="prevCard()">&#60;</button>
+
+  <!-- Card Display -->
+  <div class="info-card-img" [style.backgroundImage]="'url(' + cards[currentIndex].image + ')'">  </div>
+    <p id="info-card-text">{{ cards[currentIndex].text }}</p>
+
+
+  <!-- Next Button -->
+  <button class="arrow next" (click)="nextCard()">&#62;</button>
+</div>

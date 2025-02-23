@@ -1,14 +1,14 @@
-// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-
+import { RouterModule } from '@angular/router';  // Import the router module if needed
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
-  templateUrl:
- './app.component.html',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  standalone: true,  // Indicating this component is also standalone
+  imports: [RouterModule, HeaderComponent, FooterComponent]  // Import the standalone components you need here
 })
-export class AppComponent {}
+export class AppComponent {
+  title = " nothing";
+}

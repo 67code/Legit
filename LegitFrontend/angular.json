@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "x": {
+    "LegitFrontEnd": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/x",
+            "outputPath": "dist/legit-front-end",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,8 +27,9 @@
               }
             ],
             "styles": [
-                "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/font-awesome/css/font-awesome.min.css"
+
             ],
             "scripts": []
           },
@@ -60,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "x:build:production"
+              "buildTarget": "LegitFrontEnd:build:production"
             },
             "development": {
-              "buildTarget": "x:build:development"
+              "buildTarget": "LegitFrontEnd:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,16 +82,17 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
-
-                
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+              "src/styles.css",
+                "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],         
+
+            "scripts": [  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+]
           }
         }
       }

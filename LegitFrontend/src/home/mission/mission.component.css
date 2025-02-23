@@ -1,0 +1,102 @@
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.mission-container {
+  background: linear-gradient(45deg, #ffa184, #f4cfcf, #ffa184);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+  text-align: center;
+  color: #3f3f3f;
+  display: flex;
+  flex-direction: row; /* Change to column for stacking text and search box */
+  justify-content: space-evenly;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mission-text-contsiner {
+ left: -40px;
+}
+#mission-text-1 {
+  font-family: 'Times New Roman', Times, serif;
+  overflow-wrap: break-word; /* Ensures long words break properly */
+  word-wrap: break-word; /* Ensures wrapping in older browsers */
+  text-overflow: clip; /* Prevents '...' and shows full text */
+  font-size: 40px;
+  font-weight: bold;
+  margin: 20px;
+  font-style: italic;
+}
+#mission-text-2 {
+  font-family: 'Times New Roman', Times, serif;
+  overflow-wrap: break-word; /* Ensures long words break properly */
+  word-wrap: break-word; /* Ensures wrapping in older browsers */
+  text-overflow: clip; /* Prevents '...' and shows full text */
+  margin-bottom: 30px;
+  font-style: italic;
+}
+/* Style for the search box container */
+.search-box-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center; /* Aligns the input and button horizontally */
+  position: relative;
+}
+
+/* Style for the search box */
+.search-box {
+  height: 40px;
+  width: 400px; /* Adjust width as needed */
+  padding: 12px;
+  border-radius: 30px;
+  border: 2px solid #ff9a9e;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-box:focus {
+  border-color: #fad0c4;
+  box-shadow: 0 0 10px rgba(255, 154, 158, 0.5);
+}
+
+/* Style for the search button (icon) */
+.search-icon {
+  position: absolute;
+  right: 10px; /* Align the icon to the right end */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-icon i {
+  font-size: 20px; /* Size of the icon */
+  color: #ff9a9e;
+}
+
+/* ✅ Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .mission-container {
+    flex-direction: column; /* Stack text and search box on small screens */
+    height: auto;
+    padding: 10px 5px;
+    gap: 10px;
+  }
+
+  .mission-container div:first-child {
+    text-align: center;
+    padding: 5px 0;
+    white-space: normal;
+  }
+
+  .search-box {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+/* ff9a9e */
