@@ -1,0 +1,101 @@
+/* General styles for the header */
+.header {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+
+/* Container for the header content */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Logo styles */
+.logo-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation styles */
+.navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+ color: gray;
+}
+
+/* CTA button styles */
+.cta-button {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Responsive styles for small and medium screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 1rem; /* Add space between stacked items */
+  }
+
+  .navigation {
+    flex-direction: column; /* Stack navigation links vertically */
+    gap: 0.5rem; /* Reduce gap between links */
+    width: 100%; /* Full width for navigation */
+  }
+
+  .cta {
+    width: 100%; /* Full width for CTA button */
+  }
+
+  .cta-button {
+    width: 100%; /* Full width button */
+    text-align: center; /* Center button text */
+  }
+}
+
+@media (max-width: 480px) {
+    .container {
+      padding: 0.5rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  .logo-link {
+    font-size: 0.85rem; /* Reduce logo size for very small screens */
+  }
+
+  .navigation {
+    flex-direction: row;
+    gap: 0.25rem; 
+    font-size: 0.85rem;/* Further reduce gap between links */
+  }
+
+  .cta-button {
+    padding: 0.5rem;
+    font-size: 0.85rem; /* Adjust button padding */
+  }
+}

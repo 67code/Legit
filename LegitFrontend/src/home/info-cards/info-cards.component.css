@@ -20,7 +20,6 @@
   background-repeat: no-repeat;
   border-radius: 20px;
   transition: background-image 0.5s ease-in-out;
-
 }
 
 /* Text container (right side) */
@@ -36,23 +35,62 @@
 
 /* Arrows */
 .arrow {
-   border: none;
+  border: none;
   font-size: 30px;
   font-weight: bold;
-  background-color:white;
+  background-color: white;
   color: rgb(208, 69, 69);
   cursor: pointer;
   padding: 10px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1; /* Ensure arrows stay above other elements */
 }
 
 /* Arrow positions */
 .prev {
-  left: -80px;
+  left: -50px; /* Adjust position to stay inside container */
 }
 
 .next {
-  right: -80px;
+  right: -50px; /* Adjust position to stay inside container */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .info-cards-container {
+    width: 90%; /* Adjust the width to fit smaller screens */
+    height: auto; /* Allow the height to adjust based on content */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+
+  }
+
+  .info-card-img {
+    width: 100%; /* Full width for image on small screens */
+    height: 200px; /* Adjust image height for smaller screens */
+    border-radius: 10px; /* Slightly reduce border-radius */
+    align-self: center;
+  }
+
+  #info-card-text {
+    width: 100%; /* Full width for text container on small screens */
+    text-align: left; /* Align text to the left */
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .arrow {
+    font-size: 25px; /* Reduce arrow size on small screens */
+    padding: 8px; /* Adjust padding */
+  }
+
+  /* Adjust arrow positioning on small screens */
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
 }
