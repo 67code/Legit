@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { MissionComponent } from './mission/mission.component';
-import { InfoCardsComponent } from './info-cards/info-cards.component';
-import { TrustMessageComponent } from './trust-message/trust-message.component';
-import { TestimonialComponent } from './testimonial/testimonial.component';
+import { MissionComponent } from '../../component/mission/mission.component';
+import { InfoCardsComponent } from '../../component/info-cards/info-cards.component';
+import { TrustMessageComponent } from '../../component/trust-message/trust-message.component';
+import { TestimonialComponent } from '../../component/testimonial/testimonial.component';
 @Component({
   selector: 'app-home',
   imports: [MissionComponent,InfoCardsComponent,TrustMessageComponent,TestimonialComponent],
