@@ -51,34 +51,54 @@
 /* Style for the search box */
 .search-box {
   height: 40px;
-  width: 400px; /* Adjust width as needed */
+  width: 400px; 
   padding: 12px;
   border-radius: 30px;
   border: 2px solid #ff9a9e;
   font-size: 16px;
   outline: none;
   transition: all 0.3s ease;
-}
+} 
 
 .search-box:focus {
   border-color: #fad0c4;
   box-shadow: 0 0 10px rgba(255, 154, 158, 0.5);
 }
 
-/* Style for the search button (icon) */
 .search-icon {
   position: absolute;
-  right: 10px; /* Align the icon to the right end */
+  right: 10px;
   background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px; /* Add padding for better click area */
+  transition: transform 0.1s ease, background-color 0.2s;
+  border-radius: 50%; /* Optional: Makes it feel like an icon button */
 }
 
-.search-icon i {
-  font-size: 20px; /* Size of the icon */
-  color: #ff9a9e;
+.search-icon:hover {
+  background: rgba(255, 154, 158, 0.2); /* Light background on hover */
 }
+
+.search-icon:active {
+  transform: scale(0.9); /* Gives a click effect */
+}
+
+.search-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #ff9a9e;
+  transition: stroke 0.2s ease;
+}
+
+.search-icon:hover svg {
+  stroke: #d65a5a; /* Darker color on hover */
+}
+
 
 /* ✅ Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
@@ -100,3 +120,5 @@
   }
 }
 /* ff9a9e */
+
+

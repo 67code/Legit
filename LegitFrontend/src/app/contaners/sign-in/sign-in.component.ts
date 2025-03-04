@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css'],
   standalone: true,
-  imports: [FormsModule, RouterModule]
+  imports: [FormsModule, RouterModule, CommonModule]
 })
 export class SignInComponent {
 

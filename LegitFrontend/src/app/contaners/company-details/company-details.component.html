@@ -1,0 +1,22 @@
+<p style="color: red;  font-size: larger;">aun kya</p>
+
+
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+<div *ngIf="companyData" class="company-card">
+  <img [src]="companyData.logoUrl" alt="Company Logo" class="company-logo" />
+  <h2>{{ companyData.name }}</h2>
+  <p>{{ companyData.about }}</p>
+  
+  <div class="legit-score">
+    <strong>Legit Score: </strong>{{ companyData.legitScore }} / 100
+  </div>
+
+  <h3>Customer Reviews</h3>
+  <ul>
+    <li *ngFor="let review of companyData.reviews">
+      {{ review }}
+    </li>
+  </ul>
+</div>
