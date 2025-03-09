@@ -6,11 +6,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CompanyService {
-  private readonly apiUrl = 'https://your-backend-api.com/company'; // Replace with your actual API URL
+  private readonly apiUrl = 'http://localhost:5000/api/company-data'; // Replace with your actual API URL
 
   constructor(private readonly http: HttpClient) {}
 
   getCompanyDetails(name: string): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}?name=${name}`);
+      const formattedCompanyName = name.toUpperCase().replace(/\s/g, ''); // Remove spaces and convert to uppercase
+
+      return this.http.get<any>(`${this.apiUrl}/${formattedCompanyName}`);
   }
 }

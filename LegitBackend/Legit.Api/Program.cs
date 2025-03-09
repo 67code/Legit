@@ -31,7 +31,17 @@ builder.Services.AddValidatorsFromAssemblyContaining<GetCompanyByNameQuery>();
 
 // Add controllers
 builder.Services.AddControllers();
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy =>
+        {
+            policy.AllowAnyOrigin() // Allow frontend requests
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+        });
+});
 var app = builder.Build();
+app.UseCors("AllowAll"); // Enable CORS globally
 app.MapControllers();
 app.Run();

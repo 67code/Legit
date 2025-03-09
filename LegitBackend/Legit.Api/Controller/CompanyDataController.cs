@@ -20,7 +20,7 @@ namespace Legit.Api.Controller
         }
 
         [HttpGet("{domainName}")]
-        public async Task<IActionResult> GetCompanyData([FromRoute(Name = "DomainName")] string domainName
+        public async Task<IActionResult> GetCompanyData([FromRoute(Name = "domainName")] string domainName
 )
         {
             var companyData = await _mediator.Send(new GetCompanyByNameQuery(domainName));

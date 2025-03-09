@@ -1,20 +1,57 @@
+<div *ngIf="loading" class="loading">
+  <p>Loading...</p>
+</div>
 
-<div *ngIf="loading">Loading...</div>
-<div *ngIf="errorMessage">{{ errorMessage }}</div>
+<div *ngIf="errorMessage" class="error">
+  <p>{{ errorMessage }}</p>
+</div>
 
-<div *ngIf="companyData" class="company-card">
-  <img [src]="companyData.logoUrl" alt="Company Logo" class="company-logo" />
-  <h2>{{ companyData.name }}</h2>
-  <p>{{ companyData.about }}</p>
-  
-  <div class="legit-score">
-    <strong>Legit Score: </strong>{{ companyData.legitScore }} / 100
-  </div>
+<div *ngIf="companyData" class="company-details">
+  <!-- Company Info Section -->
+  <section class="company-info">
+    <div class="company-header">
+      <img [src]="companyData.logoUrl || 'assets/default-logo.png'" 
+           alt="Company Logo" class="company-logo" />
+      <div class="company-details-text">
+        <h1>{{ companyData.companyName }}</h1>
+        <p class="location"><strong>📍 Location:</strong> {{ companyData.location }}</p>
+        <p><strong>🏢 Active for:</strong> {{ companyData.activeYears }} years</p>
+        <p><strong>👥 Active Users:</strong> {{ companyData.activeUsers }}</p>
+      </div>
+    </div>
+  </section>
 
-  <h3>Customer Reviews</h3>
-  <ul>
-    <li *ngFor="let review of companyData.reviews">
-      {{ review }}
-    </li>
-  </ul>
+  <!-- Description Section -->
+  <section class="company-description">
+    <p>{{ companyData.description }}</p>
+  </section>
+
+  <!-- Legit Score Section -->
+  <section class="company-legit-score">
+    <strong> Legit Score:</strong> 
+    <span [class.high-score]="companyData.legitScore >= 80"
+          [class.medium-score]="companyData.legitScore >= 50 && companyData.legitScore < 80"
+          [class.low-score]="companyData.legitScore < 50">
+      {{ companyData.legitScore }} / 100
+    </span>
+  </section>
+
+  <!-- Contact Info Section -->
+<section class="contact-info">
+  <p><strong> Email:</strong> <a [href]="'mailto:' + companyData.email">{{ companyData.email }}</a></p>
+  <p><strong> Website:</strong> <a [href]="companyData.website" target="_blank">{{ companyData.website }}</a></p>
+</section>
+
+  <!-- Reviews Section -->
+  <section class="reviews">
+    <h3>📢 Customer Reviews</h3>
+    <ul *ngIf="companyData.reviews?.length; else noReviews">
+      <li *ngFor="let review of companyData.reviews">
+        <span class="quote">“</span> {{ review }} <span class="quote">”</span>
+      </li>
+    </ul>
+    <ng-template #noReviews>
+      <p>No reviews available.</p>
+    </ng-template>
+  </section>
 </div>
