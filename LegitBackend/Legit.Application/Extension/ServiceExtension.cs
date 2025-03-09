@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using LegitModule.Application.Command.Create;
 using Microsoft.Extensions.DependencyInjection;
+using static Legit.Application.Query.Get.GetCompanyByNameQueryValidator;
 
 namespace Legit.Application.Extension
 {
@@ -17,6 +18,7 @@ namespace Legit.Application.Extension
 
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
             services.AddTransient<CreateUserCommandHandler>();  
+            services.AddTransient<GetCompanyByNameQueryHandler>();
         }
 
     }

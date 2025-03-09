@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LegitModule")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51b33219252a512c65ce0732001eb293786ee432")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7be952a1a48862d535297d90c2aac20e31a3685")]
 [assembly: System.Reflection.AssemblyProductAttribute("LegitModule")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LegitModule")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

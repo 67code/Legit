@@ -26,7 +26,6 @@ namespace Legit.Api.Controller
         {
             var userId = await _mediator.Send(command);
             return Ok(new { Message = "User registered successfully!", UserId = userId });
-            //
         }
     }
 }
