@@ -37,7 +37,7 @@ namespace Legit.Application.Query.Get
                 CompanyDetails company = _companDetailsService.GetComaponyDetails(domainName);
                 CompanyDetialsDto companyDetialsDto = new CompanyDetialsDto()
                 {
-                    CompanyName = company.Name,
+                    CompanyName = company.CompanyName,
                     Location = company.Location,
                     Email = company.Email,
                     Website = company.Website,
@@ -45,12 +45,13 @@ namespace Legit.Application.Query.Get
                     ActiveUsers = company.ActiveUsers,
                     Description = company.Description,
                     LegitScore = 5,
+                    Category =company.Category
 
                 };
-            return Task.FromResult(companyDetialsDto);
+                return Task.FromResult(companyDetialsDto);
             }
 
-    
+
         }
     }
 }

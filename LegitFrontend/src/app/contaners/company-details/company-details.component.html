@@ -12,46 +12,57 @@
     <div class="company-header">
       <img [src]="companyData.logoUrl || 'assets/default-logo.png'" 
            alt="Company Logo" class="company-logo" />
-      <div class="company-details-text">
-        <h1>{{ companyData.companyName }}</h1>
-        <p class="location"><strong>📍 Location:</strong> {{ companyData.location }}</p>
-        <p><strong>🏢 Active for:</strong> {{ companyData.activeYears }} years</p>
-        <p><strong>👥 Active Users:</strong> {{ companyData.activeUsers }}</p>
+      <div class="company-overview">
+        <h1 id = "company-name">{{ companyData.companyName }}</h1>
+    <p id="description">{{ companyData.description }}</p>
+        <h2 id="category">{{ companyData.category }}</h2>
       </div>
     </div>
   </section>
 
-  <!-- Description Section -->
-  <section class="company-description">
-    <p>{{ companyData.description }}</p>
-  </section>
+<div class ="company-content">
+  <section class="company-info">
+    <h3>Location</h3>
+    <p>{{ companyData.location }}</p>
 
-  <!-- Legit Score Section -->
-  <section class="company-legit-score">
-    <strong> Legit Score:</strong> 
-    <span [class.high-score]="companyData.legitScore >= 80"
-          [class.medium-score]="companyData.legitScore >= 50 && companyData.legitScore < 80"
-          [class.low-score]="companyData.legitScore < 50">
-      {{ companyData.legitScore }} / 100
-    </span>
-  </section>
+    <h3>Active For</h3>
+    <p>{{ companyData.activeYears }} years</p>
 
-  <!-- Contact Info Section -->
-<section class="contact-info">
-  <p><strong> Email:</strong> <a [href]="'mailto:' + companyData.email">{{ companyData.email }}</a></p>
-  <p><strong> Website:</strong> <a [href]="companyData.website" target="_blank">{{ companyData.website }}</a></p>
+    <h3>Active Users</h3>
+    <p>{{ companyData.activeUsers }}</p>
+
+    <h3>Legit Score</h3>
+    <p>
+      <span [class.high-score]="companyData.legitScore >= 80"
+            [class.medium-score]="companyData.legitScore >= 50 && companyData.legitScore < 80"
+            [class.low-score]="companyData.legitScore < 50">
+        {{ companyData.legitScore }} / 100
+      </span>
+    </p>
+
+    <h3>Email</h3>
+    <p><a [href]="'mailto:' + companyData.email">{{ companyData.email }}</a></p>
+
+    <h3>Website</h3>
+    <p><a [href]="companyData.website" target="_blank">{{ companyData.website }}</a></p>
 </section>
+<section id = "company-features">
+<h2>Company Details</h2>
 
-  <!-- Reviews Section -->
-  <section class="reviews">
-    <h3>📢 Customer Reviews</h3>
-    <ul *ngIf="companyData.reviews?.length; else noReviews">
-      <li *ngFor="let review of companyData.reviews">
-        <span class="quote">“</span> {{ review }} <span class="quote">”</span>
-      </li>
-    </ul>
-    <ng-template #noReviews>
-      <p>No reviews available.</p>
-    </ng-template>
-  </section>
+  <div class="service-content">
+    <img src="ludovic-1.jpg" alt="Service Feature 1" class="service-image" />
+    <p>Ludovic Moissanite is an online retailer specializing in moissanite jewelry, including engagement rings and other fine pieces.</p>
+
+    <!-- <img [src]="companyData.serviceImage2" alt="Service Feature 2" class="service-image" /> -->
+        <img src="ludovic-2.jpg" alt="Service Feature 2" class="service-image" />
+    <!-- <p>{{ companyData.serviceText2 }}</p> -->
+         <p>While Ludovic Moissanite offers a range of moissanite jewelry, potential customers should exercise caution due to reported trustworthiness concerns. It's advisable to conduct thorough research and consider customer reviews before making a purchase.</p>
+
+  </div>
+</section>
+</div>
+
+<div class="company-reviews">
+  <p>tambadi chambadi</p>
+</div>
 </div>

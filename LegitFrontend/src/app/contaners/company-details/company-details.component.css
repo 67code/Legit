@@ -30,15 +30,6 @@
   font-weight: bold;
 }
 
-/* Company Info Section */
-.company-info {
-  background-color: #fff;
-  padding: 40px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  animation: slideIn 0.5s ease-in-out;
-}
 
 .company-header {
   display: flex;
@@ -50,8 +41,8 @@
 }
 
 .company-logo {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 8px;
   object-fit: cover;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -62,40 +53,72 @@
   transform: scale(1.05);
 }
 
-.company-details-text {
+.company-overview {
   flex: 1;
 }
 
-.company-details-text h1 {
-  font-size: 24px;
+#company-name {
+  font-size: 35px;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
-.company-details-text p {
+#description{
   font-size: 18px;
   color: #555;
   margin-bottom: 8px;
 }
 
-/* Company Description Section */
-.company-description {
+#category {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  background-color:#fbf5f5;
+  border-radius: 6px;
+  width: fit-content;
+  font-weight: lighter;
+}
+.company-content {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  background-color: #FAF3E0;
+  gap: 100px; /* Adds space between sections */
+  padding: 20px; /* Optional padding for better spacing */
+}
+.company-info {
   background-color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-bottom: 40px;
-  margin-top: 40px;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #444;
-  animation: fadeIn 1s ease-in-out;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  animation: slideIn 0.5s ease-in-out;
+ 
+}
+.company-info h3 {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #222;
 }
 
-.company-description p {
-  font-style: italic;
+.company-info p {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #6c6c6c;
 }
 
+/* Links */
+.company-info a {
+  color: #6c6c6c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.company-info a:hover {
+  text-decoration: underline;
+  color: #000;
+}
 /* Legit Score Section */
 .company-legit-score {
   font-size: 20px;
@@ -117,71 +140,58 @@
   color: #dc3545;
 }
 
-.contact-info {
-  margin-top: 30px;
+.website-services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #f3ecec;
+  border-radius: 10px;
+}
+
+h2 {
   font-size: 18px;
-  line-height: 1.6;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.contact-info p {
-  margin-bottom: 25px; /* Adds space between email and website */
-}
-
-.contact-info a {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-/* Reviews Section */
-.reviews {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.reviews h3 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.reviews ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.reviews li {
-  background-color: #fff;
-  padding: 18px;
-  margin: 15px 0;
-  border-left: 5px solid #007bff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-  font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-.reviews li:hover {
-  transform: translateX(10px);
-}
-
-.reviews .quote {
-  font-size: 28px;
-  color: #bbb;
-}
-
-.noReviews p {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: normal;
   font-style: italic;
-  color: #888;
 }
 
+.service-content {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+  font-weight: normal;
+  gap: 45px;
+  width: 100%;
+  max-width: 600px;
+  
+}
+
+.service-image {
+  width: 850px;
+  height:300px;
+  border-radius: 8px;
+}
+
+p {
+  font-size: 16px;
+  color: #ffffff;
+  max-width: 700px;
+  bottom: 90px;
+
+}
+.company-reviews
+{
+  height:250px;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+
+}
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -201,4 +211,6 @@
     transform: translateY(0);
     opacity: 1;
   }
+
+  
 }

@@ -21,10 +21,10 @@ namespace Legit.Infrastructure.Service
         }
 
 
-        public CompanyDetails GetComaponyDetails(string companyName)
+        public CompanyDetails GetComaponyDetails(string domainName)
         {
 
-            CompanyDetails res = _companyDetailsRepository.GetComaponyDetails(companyName);
+            CompanyDetails res = _companyDetailsRepository.GetComaponyDetails(domainName);
             return res;
 
         }

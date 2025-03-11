@@ -15,7 +15,7 @@ export class CompanyDetailsComponent {
   loading: boolean = false;
   errorMessage: string = '';
 
-  constructor(private route: ActivatedRoute, private companyService: CompanyService) {
+  constructor(private readonly route: ActivatedRoute, private readonly companyService: CompanyService) {
     this.route.params.subscribe(params => {
       const companyName = params['name'];
       if (companyName) {

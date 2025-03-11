@@ -13,11 +13,11 @@ namespace Legit.Infrastructure.Repository
         {
         _context = context;
         }
-        public CompanyDetails GetComaponyDetails(string companyName)
+        public CompanyDetails GetComaponyDetails(string domainName)
         {
         
         
-            var result = _context.CompanyDetails.Where(x => x.Name == companyName).FirstOrDefault();
+            var result = _context.CompanyDetails.Where(x => x.DomainName == domainName).FirstOrDefault();
             return result;
             
         }

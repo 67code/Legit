@@ -15,6 +15,8 @@ namespace Legit.Application.Dto
         public string Description { get; set; }
         public string Email { get; set; }
         public string Website { get; set; }
+public string Category { get; set; }
+        public string DomainName {get;set;}
 
     }
 }
