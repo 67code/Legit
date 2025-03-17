@@ -10,8 +10,8 @@ export class TestimonialComponent implements OnInit {
   testimonials = [
     { text: "Great service!", user: "Alice", image: "/jamal.jpg" },
     { text: "Very reliable!", user: "cristiano", image: "/ronaldo.jpg" },
-    { text: "I created this!", user: "westside", image: "/syed.jpg" },
-    { text: "Fast as my relationships!", user: "kendall", image: "/kendall.jpg" }
+    { text: "Made my shopping experience easy!", user: "westside", image: "/syed.jpg" },
+    { text: "saves my time", user: "kendall", image: "/kendall.jpg" }
   ];
 
   ngOnInit() {

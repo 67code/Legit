@@ -1,10 +1,12 @@
 <div class="testimonial-container">
-  <div class="testimonial-title">-- What Our Customers Say --</div>
-<div class="testimonial-row">
-  <div *ngFor="let testimonial of testimonials" class="testimonial-card">
-    <img [src]="testimonial.image" alt="{{ testimonial.user }}" class="profile-pic">
-    <p class="testimonial-text">"{{ testimonial.text }}"</p>
-    <a class="user-name" href="{{ testimonial.user }}"> {{ testimonial.user }} </a>
-  </div>
+  <div class="testimonial-title">Customer reviews</div>
+  <div class="testimonial-grid">
+    <div *ngFor="let testimonial of testimonials" class="testimonial-row">
+      <div class="user-profile">
+        <img [src]="testimonial.image" alt="{{ testimonial.user }}" class="profile-pic">
+        <a class="user-name" href="{{ testimonial.user }}">{{ testimonial.user }}</a>
+      </div>
+      <p class="testimonial-text">"{{ testimonial.text }}"</p>
+    </div>
   </div>
 </div>

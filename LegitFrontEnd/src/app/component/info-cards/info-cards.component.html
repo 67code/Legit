@@ -1,12 +1,13 @@
 <div class="info-cards-container">
-  <!-- Previous Button -->
-  <button class="arrow prev" (click)="prevCard()">&#60;</button>
-
   <!-- Card Display -->
-  <div class="info-card-img" [style.backgroundImage]="'url(' + cards[currentIndex].image + ')'">  </div>
-    <p id="info-card-text">{{ cards[currentIndex].text }}</p>
-
-
-  <!-- Next Button -->
-  <button class="arrow next" (click)="nextCard()">&#62;</button>
+  <div class="info-card-wrapper">
+    <div *ngFor="let card of cards; let i = index" class="info-card" 
+         [class.active]="i === currentIndex"
+         [class.prev]="i === currentIndex - 1">
+      <div class="info-card-img" [style.backgroundImage]="'url(' + card.image + ')'"></div>
+      <div class="info-card-content">
+        <p class="info-card-text">{{ card.text }}</p>
+      </div>
+    </div>
+  </div>
 </div>

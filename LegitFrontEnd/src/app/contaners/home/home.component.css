@@ -16,8 +16,9 @@
 }
 
 :host ::ng-deep .second-half {
-  color: red;
-  font-weight: normal;
+  color: rgb(189, 0, 0);
+  font-weight: bold;
+
 }
 .custom-link {
   text-decoration: none;  /* Removes the underline */

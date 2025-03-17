@@ -5,13 +5,13 @@
 }
 
 .mission-container {
-  background: linear-gradient(45deg, #ffa184, #f4cfcf, #ffa184);
+  background-color: rgb(248, 250, 252);
   background-size: 200% 200%;
   animation: gradientAnimation 5s ease infinite;
   text-align: center;
   color: #3f3f3f;
   display: flex;
-  flex-direction: row; /* Change to column for stacking text and search box */
+  flex-direction: column; /* Change to column for stacking text and search box */
   justify-content: space-evenly;
   align-items: center;
   height: 400px;
@@ -38,7 +38,8 @@
   word-wrap: break-word; /* Ensures wrapping in older browsers */
   text-overflow: clip; /* Prevents '...' and shows full text */
   margin-bottom: 30px;
-  font-style: italic;
+    font-style: italic;
+
 }
 /* Style for the search box container */
 .search-box-container {
@@ -54,7 +55,7 @@
   width: 400px; 
   padding: 12px;
   border-radius: 30px;
-  border: 2px solid #ff9a9e;
+  border: 2px solid #0a0a0a;
   font-size: 16px;
   outline: none;
   transition: all 0.3s ease;
@@ -91,7 +92,7 @@
 .search-icon svg {
   width: 20px;
   height: 20px;
-  stroke: #ff9a9e;
+  stroke: #141313;
   transition: stroke 0.2s ease;
 }
 

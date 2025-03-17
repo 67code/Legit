@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 
 @Component({
   selector: 'app-info-cards',
@@ -8,7 +7,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./info-cards.component.css'],
   imports: [CommonModule],
 })
-export class InfoCardsComponent {
+export class InfoCardsComponent implements OnInit, OnDestroy {
   cards = [
     { text: "We help you buy from legit online sellers", image: "/auth_banner_2-4.jpg" },
     { text: "We hold the website's user base information", image: "/auth_banner_3-2.jpg" },
@@ -17,14 +16,34 @@ export class InfoCardsComponent {
   ];
 
   currentIndex: number = 0;
+  prevIndex: number = -1; // Track the previous card index
+  private interval: any;
 
-  prevCard() {
-    this.currentIndex = (this.currentIndex - 1 + this.cards.length) % this.cards.length;
+  ngOnInit(): void {
+    this.startAutoSlide();
   }
 
-  nextCard() {
+  ngOnDestroy(): void {
+    this.stopAutoSlide();
+  }
+
+  // Start automatic sliding
+  startAutoSlide(): void {
+    this.interval = setInterval(() => {
+      this.nextCard();
+    }, 5000); // Change card every 5 seconds
+  }
+
+  // Stop automatic sliding
+  stopAutoSlide(): void {
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
+  }
+
+  // Navigate to the next card
+  nextCard(): void {
+    this.prevIndex = this.currentIndex; // Set the previous index
     this.currentIndex = (this.currentIndex + 1) % this.cards.length;
   }
 }
-
-

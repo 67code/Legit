@@ -1,5 +1,5 @@
 .trust-message-container {
-  background-color: #ffd2d2;
+  background-color: #ffffff;
   color: #3f3f3f;
   display: flex;
   justify-content: space-between;
@@ -62,7 +62,7 @@
 /* Image Styling */
 .trust-image {
   width: 500px;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
   clip-path: inset(0 round 40px); /* Clipping effect for rounded corners */
   transition: all 0.3s ease-in-out;

@@ -1,63 +1,156 @@
-
-.testimonial-title {
-   color: rgb(9, 9, 10);
-  font-weight: bold;
+/* Container for the entire testimonial section */
+.testimonial-container {
+  width: 100%; /* Full width of the screen */
+  margin: 0; /* Remove any margin */
+  padding: 30px 20px; /* Adjust padding for a bit of spacing */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+  position: relative; /* To allow more control on positioning */
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
+
+.testimonial-title { 
+  font-size: 28px; /* Larger font size */
+  font-weight: 600; /* Slightly lighter weight than bold */
+  color: #2c3e50; /* Darker color for better readability */
+  letter-spacing: 2px; /* Space out the letters for clarity */
+  position: relative; /* For creating a decorative underline */
+  text-align: center; /* Center the title */
+  margin-bottom: 60px;
+}
+
+/* Adding a decorative line below the title */
+.testimonial-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Position the line just below the text */
+  left: 50%;
+  transform: translateX(-50%); /* Center the line */
+  width: 60px; /* Line width */
+  height: 3px; /* Line thickness */
+  background-color: #e62222; /* Accent color for the line */
+}
+
+/* Grid container for reviews */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two reviews per row */
+  gap: 20px;
+  justify-items: center; /* Center the content in each cell */
+  padding: 0 10px; /* Add some spacing to left and right */
+}
+
+/* Each testimonial row */
 .testimonial-row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;  /* Allows wrapping on smaller screens */
-  gap: 20px;
-  height: 400px;
-}
-
-.testimonial-card {
+  flex-direction: column;
+  align-items:flex-start;
   background-color: #fff;
-  padding: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  width: 23%;  /* 4 cards in a row */
-  min-width: 200px; /* Adjusts on smaller screens */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 500px; /* Limit max width */
+  width: 100%; /* Make sure it scales to the grid */
+  height: 80px;
 }
 
+/* Hover effect */
+.testimonial-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* User profile section */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Profile picture styling */
 .profile-pic {
-  width: 60px;
-  height: 60px;
+  width: 30px; /* Slightly larger for better visibility */
+  height: 30px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
+  border: 3px solid #2c3e50;
 }
 
-.testimonial-text {
-  font-size: 14px;
-  color: #333;
-}
-
+/* User name styling */
 .user-name {
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 600;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.user-name:hover {
+  color: #e62222;
+}
+
+/* Testimonial text styling */
+.testimonial-text {
+  font-size: 12px;
   color: #555;
+  line-height: 1.8;
+  margin: 0;
+  font-style: italic;
+  align-self: center;
 }
 
-@media (max-width: 900px) {
-  .testimonial-card {
-    width: 45%; 
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .testimonial-container {
+    padding: 25px 10px; /* Adjust padding for smaller screens */
+  }
+  .testimonial-title {
+    font-size: 22px; /* Adjust title size for smaller screens */
+    margin-bottom: 20px;
+  }
+  .testimonial-row {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  .profile-pic {
+    width: 40px; /* Slightly smaller for smaller screens */
+    height: 40px;
+  }
+  .user-name {
+    font-size: 14px;
+  }
+  .testimonial-text {
+    font-size: 14px;
   }
 }
 
-@media (max-width: 600px) {
-  .testimonial-row
-  {
-    height: auto;
-    align-items: center;
-    justify-content: center;
+@media (max-width: 480px) {
+  .testimonial-title {
+    font-size: 18px;
+    margin-bottom: 15px;
   }
-  .testimonial-card {
-    width: 30%; 
-  } 
+  .testimonial-row {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  .profile-pic {
+    width: 35px; /* Further reduce profile picture size */
+    height: 35px;
+  }
+  .user-name {
+    font-size: 14px;
+  }
+  .testimonial-text {
+    font-size: 13px;
+  }
 }
-
