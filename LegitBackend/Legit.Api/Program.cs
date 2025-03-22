@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using static Legit.Application.Query.Get.GetCompanyByNameQueryValidator;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +22,7 @@ IConfiguration configuration = new ConfigurationBuilder()
 
 // Add DbContext configuration here
 builder.Services.AddDbContext<RepositoryContext>(options =>
-    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlite(configuration.GetConnectionString("DefaultConnection")));
 builder.Services.ConfigureHandlers();
 // Register other services
 builder.Services.AddScoped<ICompanyDetailsService, CompayDetailsService>();
@@ -41,7 +43,24 @@ builder.Services.AddCors(options =>
                   .AllowAnyHeader();
         });
 });
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+                            {
+                                c.SwaggerDoc("v1", new OpenApiInfo
+                                {
+                                    Title = "Legit.Api",
+                                    Version = "v1",
+                                    Description = "Legit.Api Web API",
+                                });
+                            });
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
 app.UseCors("AllowAll"); // Enable CORS globally
 app.MapControllers();
 app.Run();

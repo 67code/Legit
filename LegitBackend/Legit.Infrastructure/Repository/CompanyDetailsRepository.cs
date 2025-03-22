@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Legit.Application.Contract.IRepository;
 using Legit.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Legit.Infrastructure.Repository
 {
-    public class CompanyDetailsRepository: ICompanyDetailsRepository
+    public class CompanyDetailsRepository:ICompanyDetailsRepository
     {
         private readonly RepositoryContext _context;
         public  CompanyDetailsRepository(RepositoryContext context)
@@ -16,8 +17,7 @@ namespace Legit.Infrastructure.Repository
         public CompanyDetails GetComaponyDetails(string domainName)
         {
         
-        
-            var result = _context.CompanyDetails.Where(x => x.DomainName == domainName).FirstOrDefault();
+            var result = _context.CompanyDetails.Select(X => X).FirstOrDefault(x => x.DomainName == domainName);
             return result;
             
         }

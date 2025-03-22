@@ -8,6 +8,6 @@ namespace Legit.Application.Contract.IRepository
 {
     public interface ICompanyDetailsRepository
     {
-        CompanyDetails GetComaponyDetails(string companyName);
+        CompanyDetails GetComaponyDetails(string domainName);
     }
 }

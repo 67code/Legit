@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
-
+import { FormsModule } from '@angular/forms'; 
 @Component({
   selector: 'app-mission',
   templateUrl: './mission.component.html',
@@ -10,7 +9,6 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 })
 export class MissionComponent {
    companyName: string = '';
-
   constructor(private readonly router: Router) {}
   missionText1: string = "Not Every Store Is Legit ";
   missionText2: string = "But We’ll Tell You Which Ones Are !";

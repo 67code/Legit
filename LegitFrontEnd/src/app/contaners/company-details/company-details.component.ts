@@ -24,17 +24,27 @@ export class CompanyDetailsComponent {
     });
   }
 
-  getCompanyDetails(name: string) {
-    this.loading = true;
-    this.companyService.getCompanyDetails(name).subscribe({
-      next: (data) => {
-        this.companyData = data;
-        this.loading = false;
-      },
-      error: () => {
+ getCompanyDetails(name: string) {
+  this.loading = true; // Show loading state
+  this.errorMessage = ''; // Reset error message
+
+  this.companyService.getCompanyDetails(name).subscribe({
+    next: (data) => {
+      console.log('API Response:', data);
+      if (!data || Object.keys(data).length === 0) {
         this.errorMessage = 'Company not found!';
-        this.loading = false;
+      } else {
+        this.companyData = data;
       }
-    });
-  }
+      this.loading = false;
+    },
+    error: (err) => {
+      console.error('API Error:', err.message);
+      this.errorMessage = 'Failed to fetch company details. Please try again later.';
+      this.loading = false;
+    }
+  });
+}
+
+
 }

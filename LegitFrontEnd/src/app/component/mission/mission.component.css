@@ -1,125 +1,191 @@
+/* General Styles */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #0a2540;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrollbars from appearing due to animations */
+}
+
+/* Load Inter Font from Google Fonts */
+.mission-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  position: relative;
+  background: linear-gradient(135deg, #f6f9fc, #e6ebf5); /* Subtle gradient background */
+  overflow: hidden;
+}
+
+/* Animated Background Elements */
+.mission-container::before,
+.mission-container::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99, 91, 255, 0.1), transparent 70%); /* Soft gradient blobs */
+  border-radius: 50%;
+  z-index: 1;
+  animation: float 8s infinite ease-in-out;
+}
+
+.mission-container::before {
+  top: -150px;
+  left: -150px;
+  animation-delay: 0s;
+}
+
+.mission-container::after {
+  bottom: -150px;
+  right: -150px;
+  animation-delay: 4s;
+}
+
+/* Additional Animated Shapes */
+.mission-container .shape-1,
+.mission-container .shape-2,
+.mission-container .shape-3 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(99, 91, 255, 0.05); /* Very light purple overlay */
+  border-radius: 50%;
+  z-index: 1;
+  animation: float 10s infinite ease-in-out;
+}
+
+.mission-container .shape-1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.mission-container .shape-2 {
+  top: 50%;
+  right: 15%;
+  animation-delay: 6s;
+}
+
+.mission-container .shape-3 {
+  bottom: 10%;
+  left: 30%;
+  animation-delay: 8s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+}
+
+/* Subtle Gradient Animation */
 @keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .mission-container {
-  background-color: rgb(248, 250, 252);
-  background-size: 200% 200%;
-  animation: gradientAnimation 5s ease infinite;
-  text-align: center;
-  color: #3f3f3f;
-  display: flex;
-  flex-direction: column; /* Change to column for stacking text and search box */
-  justify-content: space-evenly;
-  align-items: center;
-  height: 400px;
+  background: linear-gradient(135deg, #f6f9fc, #dae3f4, #f6f9fc); /* Gradient with more colors */
+  background-size: 200% 200%; /* Larger background size for animation */
+  animation: gradientAnimation 10s infinite ease-in-out; /* Smooth gradient animation */
+}
+
+.mission-content {
+  max-width: 800px;
   width: 100%;
-  box-sizing: border-box;
-}
-
-.mission-text-contsiner {
- left: -40px;
-}
-#mission-text-1 {
-  font-family: 'Times New Roman', Times, serif;
-  overflow-wrap: break-word; /* Ensures long words break properly */
-  word-wrap: break-word; /* Ensures wrapping in older browsers */
-  text-overflow: clip; /* Prevents '...' and shows full text */
-  font-size: 40px;
-  font-weight: bold;
-  margin: 20px;
-  font-style: italic;
-}
-#mission-text-2 {
-  font-family: 'Times New Roman', Times, serif;
-  overflow-wrap: break-word; /* Ensures long words break properly */
-  word-wrap: break-word; /* Ensures wrapping in older browsers */
-  text-overflow: clip; /* Prevents '...' and shows full text */
-  margin-bottom: 30px;
-    font-style: italic;
-
-}
-/* Style for the search box container */
-.search-box-container {
-  margin-top: 20px;
-  display: flex;
-  align-items: center; /* Aligns the input and button horizontally */
+  text-align: center;
   position: relative;
+  z-index: 2; /* Ensure content is above the background elements */
 }
 
-/* Style for the search box */
-.search-box {
-  height: 40px;
-  width: 400px; 
-  padding: 12px;
-  border-radius: 30px;
-  border: 2px solid #0a0a0a;
-  font-size: 16px;
-  outline: none;
-  transition: all 0.3s ease;
-} 
+.mission-text-container {
+  margin-bottom: 48px;
+}
 
-.search-box:focus {
-  border-color: #fad0c4;
-  box-shadow: 0 0 10px rgba(255, 154, 158, 0.5);
+#mission-text-1 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #0a2540;
+  letter-spacing: -0.02em;
+}
+
+#mission-text-2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #425466;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Search Box Styles */
+.search-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2; /* Ensure search box is above the background elements */
+}
+
+.search-box-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-box {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+.search-box::placeholder {
+  color: #a3a3a3;
 }
 
 .search-icon {
-  position: absolute;
-  right: 10px;
-  background: transparent;
+  background: none;
   border: none;
   cursor: pointer;
-  outline: none;
+  padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px; /* Add padding for better click area */
-  transition: transform 0.1s ease, background-color 0.2s;
-  border-radius: 50%; /* Optional: Makes it feel like an icon button */
+  color: #635bff;
+  transition: color 0.3s ease;
 }
 
 .search-icon:hover {
-  background: rgba(255, 154, 158, 0.2); /* Light background on hover */
-}
-
-.search-icon:active {
-  transform: scale(0.9); /* Gives a click effect */
+  color: #0a2540;
 }
 
 .search-icon svg {
   width: 20px;
   height: 20px;
-  stroke: #141313;
-  transition: stroke 0.2s ease;
 }
-
-.search-icon:hover svg {
-  stroke: #d65a5a; /* Darker color on hover */
-}
-
-
-/* ✅ Responsive Design for Smaller Screens */
-@media screen and (max-width: 768px) {
-  .mission-container {
-    flex-direction: column; /* Stack text and search box on small screens */
-    height: auto;
-    padding: 10px 5px;
-    gap: 10px;
-  }
-
-  .mission-container div:first-child {
-    text-align: center;
-    padding: 5px 0;
-    white-space: normal;
-  }
-
-  .search-box {
-    width: 100%; /* Full width on smaller screens */
-  }
-}
-/* ff9a9e */
-
-

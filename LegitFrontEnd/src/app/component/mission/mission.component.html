@@ -1,22 +1,23 @@
 <div class="mission-container">
-  <div class= "mission-text-contsiner">
-  <div id="mission-text-1" [innerHTML]="missionText1">{{ missionText1 }}</div>
-  <div id="mission-text-2" [innerHTML]="missionText2">{{ missionText2 }}</div>
+  <div class="mission-content">
+    <div class="mission-text-container">
+      <h1 id="mission-text-1" [innerHTML]="missionText1">{{ missionText1 }}</h1>
+      <p id="mission-text-2" [innerHTML]="missionText2">{{ missionText2 }}</p>
+    </div>
+    <!-- Search Box with Icon -->
+    <div class="search-box-container">
+      <input 
+        type="text" 
+        placeholder="Search for a website" 
+        class="search-box" 
+        [(ngModel)]="companyName"
+        (keyup.enter)="searchCompany()" />
+      <button class="search-icon" (click)="searchCompany()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
   </div>
-  <!-- Search Box with Icon -->
- <div class="search-box-container">
-  <input 
-    type="text" 
-    placeholder="Search for a website" 
-    class="search-box" 
-    [(ngModel)]="companyName"
-    (keyup.enter)="searchCompany()" />
-
-<button class="search-icon" (click)="searchCompany()">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="11" cy="11" r="8"></circle>
-    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-  </svg>
-</button>
-</div>
 </div>
