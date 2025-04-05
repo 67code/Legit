@@ -16,13 +16,12 @@
 }
 
 .testimonial-title { 
-  font-size: 28px; /* Larger font size */
+  font-size: 20px; /* Larger font size */
   font-weight: 600; /* Slightly lighter weight than bold */
   color: #2c3e50; /* Darker color for better readability */
   position: relative; /* For creating a decorative underline */
   text-align: center; /* Center the title */
   margin-bottom: 100px;
-  font-style: italic;
   font-family: 'Times New Roman', Times, serif;
 }
 
