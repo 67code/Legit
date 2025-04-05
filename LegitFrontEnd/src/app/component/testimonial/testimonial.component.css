@@ -19,10 +19,11 @@
   font-size: 28px; /* Larger font size */
   font-weight: 600; /* Slightly lighter weight than bold */
   color: #2c3e50; /* Darker color for better readability */
-  letter-spacing: 2px; /* Space out the letters for clarity */
   position: relative; /* For creating a decorative underline */
   text-align: center; /* Center the title */
   margin-bottom: 100px;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* Adding a decorative line below the title */
@@ -32,7 +33,7 @@
   bottom: -10px; /* Position the line just below the text */
   left: 50%;
   transform: translateX(-50%); /* Center the line */
-  width: 80px; /* Line width */
+  width: 20rem; /* Line width */
   height: 3px; /* Line thickness */
   background-color: #e62222; /* Accent color for the line */
 }

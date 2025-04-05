@@ -1,5 +1,5 @@
 .trust-message-container {
-  background-color: #ffffff;
+    background: linear-gradient(135deg, #f6f9fc, #c0ceeb);
   color: #0a2540;
   display: flex;
   justify-content: space-between;
