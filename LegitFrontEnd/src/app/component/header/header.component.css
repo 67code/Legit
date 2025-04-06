@@ -1,101 +1,88 @@
-/* General styles for the header */
 .header {
-  background-color: black;
-  color: white;
-  padding: 1rem;
+  background-color: #121212;
+  color: #fff;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Container for the header content */
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
-/* Logo styles */
 .logo-link {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-/* Navigation styles */
 .navigation {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .nav-link {
-  color: white;
+  color: #cccccc;
   text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .nav-link:hover {
- color: gray;
+  color: #353a40;
 }
 
-/* CTA button styles */
 .cta-button {
+
   color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
   text-decoration: none;
-  border: 1px solid white;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: white;
-  color: black;
+   color: #494d52;
 }
 
-/* Responsive styles for small and medium screens */
+
+
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
-    gap: 1rem; /* Add space between stacked items */
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem 0;
   }
 
   .navigation {
-    flex-direction: column; /* Stack navigation links vertically */
-    gap: 0.5rem; /* Reduce gap between links */
-    width: 100%; /* Full width for navigation */
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    gap: 0.8rem;
+    width: 100%;
   }
 
   .cta {
-    width: 100%; /* Full width for CTA button */
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   .cta-button {
-    width: 100%; /* Full width button */
-    text-align: center; /* Center button text */
+    width: 80%;
+    max-width: 200px;
+    text-align: center;
   }
 }
 
-@media (max-width: 480px) {
-    .container {
-      padding: 0.5rem;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-  .logo-link {
-    font-size: 0.85rem; /* Reduce logo size for very small screens */
-  }
 
-  .navigation {
-    flex-direction: row;
-    gap: 0.25rem; 
-    font-size: 0.85rem;/* Further reduce gap between links */
-  }
-
-  .cta-button {
-    padding: 0.5rem;
-    font-size: 0.85rem; /* Adjust button padding */
-  }
-}

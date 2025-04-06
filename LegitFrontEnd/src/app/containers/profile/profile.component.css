@@ -1,0 +1,94 @@
+.profile-wrapper {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 0.6s ease-in;
+
+}
+
+.profile-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.email {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.actions button {
+  padding: 0.6rem 1rem;
+  margin: 0 0.5rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actions button:hover {
+  opacity: 0.9;
+}
+
+.logout {
+  background-color: #2f2b2b;
+  color: white;
+}
+
+.actions button:not(.logout) {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.activity-card {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.review-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.review-list li {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.8rem;
+}
+
+.review-list .date {
+  display: block;
+  color: #888;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -34,7 +34,7 @@
   transform: translateX(-50%); /* Center the line */
   width: 20rem; /* Line width */
   height: 3px; /* Line thickness */
-  background-color: #e62222; /* Accent color for the line */
+  background: linear-gradient(135deg, #bed5ee, #e6ebf5); /* Subtle gradient background */
 }
 
 /* Grid container for reviews */
@@ -82,12 +82,12 @@
   height: 30px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #2c3e50;
+  border: 1px solid #395775;
 }
 
 /* User name styling */
 .user-name {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #2c3e50;
   text-decoration: none;

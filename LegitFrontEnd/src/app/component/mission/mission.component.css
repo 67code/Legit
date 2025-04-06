@@ -118,21 +118,21 @@ body {
 #mission-text-1 {
   font-size: 2rem;
   font-weight: 700;
-  font-style: italic;
   line-height: 1.1;
   margin-bottom: 24px;
   color: #0a2540;
   letter-spacing: -0.02em;
+   font-family: 'Segoe UI', sans-serif;
 }
 
 #mission-text-2 {
   font-size: 1.25rem;
   font-weight: 400;
-  font-style: italic;
   color: #425466;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
+   font-family: 'Segoe UI', sans-serif;
 }
 
 /* Search Box Styles */

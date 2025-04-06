@@ -1,0 +1,42 @@
+<section class="support-wrapper">
+  <div class="hero">
+    <h1>Need Help? We're Here for You.</h1>
+    <p>Whether you're reporting a scam or have questions, our team is ready to support you.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h2>📬 Contact Us</h2>
+      <p>Email: <a href="mailto:support@legit.com">supportlegit.com</a></p>
+      <p>Phone: +1 (800) 123-LEGIT</p>
+    </div>
+
+    <div class="card">
+      <h2>❓ FAQ</h2>
+      <ul>
+        <li>
+          <strong>How do I report a scam?</strong><br>
+          You can use the contact form below or send us an email directly.
+        </li>
+        <li>
+          <strong>Is this platform free?</strong><br>
+          Yes! Legit is 100% free to use.
+        </li>
+        <li>
+          <strong>How is scam data verified?</strong><br>
+          Reviews + business history + detection algorithms.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="form-card">
+    <h2>Send us a message</h2>
+    <form (submit)="onSubmit()" class="support-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="How can we help?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>

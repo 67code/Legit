@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
 export class TrustMessageComponent {
   message1: string = "Legit Help millions make the right choice";
   message2: string = "Share your experience on Trustpilot, where real reviews make a difference.";
+  
+  navigateToSignIn() {
+    window.location.href = "/sign-in";
+  }
 }
 
