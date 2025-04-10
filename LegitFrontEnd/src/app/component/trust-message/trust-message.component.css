@@ -1,3 +1,8 @@
+*
+{
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+}
 .trust-message-container {
     background: linear-gradient(135deg, #f6f9fc, #c0ceeb);
   color: #0a2540;
@@ -37,7 +42,6 @@
 .message-large {
   font-size: 20px;
   font-weight: bold;
-  font-style: italic;
   color: #0a2540;
   margin-left: 50px;
   opacity: 0;
@@ -47,7 +51,6 @@
 
 .message-small {
   font-size: 15px;
-  font-style: italic;
   color: #425466;
   margin-left: 50px;
   opacity: 0;
@@ -64,7 +67,6 @@
   color: white;
   border: none;
   cursor: pointer;
-  font-style: italic;
   opacity: 0;
   animation: fadeIn 1s ease-in forwards 0.5s;
 }
@@ -83,12 +85,12 @@
 /* Common Star Styles */
 .glowing-star {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background: gold;
+  width: 15px;
+  height: 15px;
+  background: rgb(248, 247, 246);
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
                      50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  box-shadow: 0 0 10px gold;
+  box-shadow: 0 0 10px rgb(177, 175, 175);
   opacity: 0; /* Initially hidden */
   animation: glowFade 3s infinite ease-in-out;
 }

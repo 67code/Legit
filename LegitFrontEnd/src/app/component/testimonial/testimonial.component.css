@@ -1,4 +1,9 @@
-/* Container for the entire testimonial section */
+*
+{
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+}
+
 .testimonial-container {
   width: 100%; /* Full width of the screen */
   margin: 0; /* Remove any margin */
@@ -16,13 +21,12 @@
 }
 
 .testimonial-title { 
-  font-size: 20px; /* Larger font size */
-  font-weight: 600; /* Slightly lighter weight than bold */
-  color: #2c3e50; /* Darker color for better readability */
+  font-weight: bold;
+  color: #0a2540;
+  font-size: 20px;
   position: relative; /* For creating a decorative underline */
   text-align: center; /* Center the title */
   margin-bottom: 100px;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 /* Adding a decorative line below the title */
@@ -88,7 +92,7 @@
 /* User name styling */
 .user-name {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   color: #2c3e50;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -100,11 +104,10 @@
 
 /* Testimonial text styling */
 .testimonial-text {
-  font-size: 12px;
-  color: #555;
+  font-size: 15px;
+  color: #425466;
   line-height: 1.8;
   margin: 0;
-  font-style: italic;
   align-self: center;
 }
 
